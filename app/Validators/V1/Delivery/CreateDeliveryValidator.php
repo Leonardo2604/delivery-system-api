@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Validations\V1\Delivery;
+namespace App\Validators\V1\Delivery;
 
 use App\Validators\AbstractValidator;
-use App\Validations\Contracts\Delivery\CreateDeliveryValidatorInterface;
+use App\Validators\Contracts\Delivery\CreateDeliveryValidatorInterface;
 
 class CreateDeliveryValidator extends AbstractValidator implements CreateDeliveryValidatorInterface
 {
