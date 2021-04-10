@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Validators\Contracts\Delivery;
+namespace App\Validators\V1\Delivery;
 
 use App\Validators\AbstractValidator;
 use App\Validators\Contracts\Delivery\UpdateDeliveryValidatorInterface;
