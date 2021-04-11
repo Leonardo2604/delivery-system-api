@@ -6,8 +6,8 @@ use App\Exceptions\UnprocessableEntityException;
 use App\Models\Delivery;
 use App\Repositories\Contracts\DeliveryRepositoryInterface;
 use App\Services\Contracts\DeliveryServiceInterface;
-use App\Validations\Contracts\Delivery\UpdateDeliveryValidator;
-use App\Validations\V1\Delivery\CreateDeliveryValidator;
+use App\Validators\Contracts\Delivery\CreateDeliveryValidatorInterface;
+use App\Validators\Contracts\Delivery\UpdateDeliveryValidatorInterface;
 use Illuminate\Database\Eloquent\Collection;
 
 class DeliveryService implements DeliveryServiceInterface
@@ -18,8 +18,8 @@ class DeliveryService implements DeliveryServiceInterface
 
     public function __construct(
         DeliveryRepositoryInterface $delievryRepository,
-        CreateDeliveryValidator $createDeliveryValidator,
-        UpdateDeliveryValidator $updateDeliveryValidator
+        CreateDeliveryValidatorInterface $createDeliveryValidator,
+        UpdateDeliveryValidatorInterface $updateDeliveryValidator
     ) {
         $this->delievryRepository = $delievryRepository;
         $this->createDeliveryValidator = $createDeliveryValidator;
