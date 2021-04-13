@@ -15,4 +15,5 @@ $router->group(['prefix' => 'v1', 'namespace' => 'V1'], function() use ($router)
         $router->delete('/{id:[0-9]+}', 'DeliveryController@delete');
     });
 
+    $router->get('google-maps-key', 'GoogleMapsController@getKey');
 });
